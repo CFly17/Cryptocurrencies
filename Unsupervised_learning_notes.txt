@@ -1,0 +1,15 @@
+Recall that when features have different scales, they can have a disproportionate impact on the model. 
+The unscaled value could lead to messy graphs. Therefore, it is important to understand when to scale 
+and normalize data. For example, if four columns of data are single digits, and the fifth column 
+is in the millions, we would need to scale the fifth column to align the other four.
+
+
+Overfitting: 
+If your model is too specific, future datasets that have different trends will be less accurate.
+Since overfitting is bad, it is best to find a way to limit features. 
+
+The process of reducing features is called DIMENSIONALITY REDUCTION.
+
+This can be in the form of:
+elimination: remove a good amount of features so the model won't run every column;
+extraction: combine features into a new set, ordered by how well they predict the original variable.

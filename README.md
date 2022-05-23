@@ -4,9 +4,7 @@
 A prominent investment bank is interested in offering a new cryptocurrency investment portfolio for its customers. They have requested a report that includes 
 
 * what cryptocurrencies are on the trading market; and 
-* how they could be grouped to create a classification system for this new investment.
-
-The goal here is to demonstrate how to process data so that it fits a machine learning model that prepares clients to get into the cryptocurrency market.
+* how they could be grouped to create a classification system.
 
 Since there is no known output, we have decided to use ```unsupervised learning``` to group the cryptocurrencies by clustering algorithms. We also use data visualizations to share our findings with the board.
 
@@ -29,4 +27,3 @@ Since there is no known output, we have decided to use ```unsupervised learning`
 
 
 ## Summary
-Our analysis suggests there is a significant market for New York commuters. However, to implement a similar program in the city of Des Moines would require additional analysis and acute attention in planning. We suggest a follow-up geographic analysis of the highest-visited checkout sites in New York City that cross-references the proximity of subscribers' employers. This may inform optimal placement of bike stations. Such a visualization could also imply centralized location(s) for bike maintenance shops. Finally, we suggest an analysis that uses the checkout location heat map across subscribed and unsubscribed groups. This would further inform advertising and marketing campaigns, e.g. "Tour the city!" vs. "The commute that gets you in shape!"

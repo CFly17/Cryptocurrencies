@@ -19,7 +19,7 @@ The primary input for analysis is ```crypto_data.csv```, a file that includes
     - *PoS (Proof of Stake)*: requires validators to stake collateral based on the number of coins owned
     - *hybrid model*
 
-![raw_tradable_cryptos](csv_example.png)
+![raw_tradable_cryptos](images/csv_example.png)
 
 ### Algorithms used
 * ```K-means```: an unsupervised learning algorithm that finds structure in unlabeled data
@@ -66,7 +66,7 @@ By removing less informative, 'noisy' variables we can focus on components that 
 ```columns=['PC 1', 'PC 2', 'PC 3'],```   
 ```index=df_crypto.index)```
 
-![three_principals](df_3_principals.png)
+![three_principals](images/df_3_principals.png)
 
 ## Analysis
 
@@ -85,7 +85,7 @@ df_elbow = pd.DataFrame(elbow_data)
 df_elbow.hvplot.line(x='k', y='inertia', xticks=k, title= 'Elbow Curve')
 ```
 
-![elbow-curve](elbow.png)
+![elbow-curve](images/elbow.png)
 The k-value seems to be around 4.
 
 2. Create a comprehensive dataset to analyze the original features of the cryptocurrencies with the new clustering classes:
@@ -94,7 +94,7 @@ The k-value seems to be around 4.
 ```clustered_df['CoinName'] = coin_name_df['CoinName']```  
 ```clustered_df['Class'] = predictions```
 
-![classes](class_by_cluster.png)
+![classes](images/class_by_cluster.png)
 Each currency now has associated cluster values and class values from 0-3.
 
 3. Create a 3D scatter plot to show the effective separation of clustered data by PCA. 
@@ -113,7 +113,7 @@ fig = px.scatter_3d(clustered_df,
 fig.update_layout(legend=dict(x=0, y=1))
 fig.show()
 ```
-![scatter](3d_scatter.png)    
+![scatter](images/3d_scatter.png)    
 The positioning of the points suggests a degree of similarity within clusters: points that are closer are more similar to each other. There also appears to be one cluster (Class 2, yellow markers) that is well-separated from the others, indicating a group of cryptocurrencies with distinct features. 
 
 4. Plot Total Coin Supply and Total Coins Mined
@@ -135,7 +135,7 @@ scaled_and_clustered_df.hvplot.scatter(x='TotalCoinsMined',
                                        hover_cols = 'CoinName')
 ```
 
-![scatter](scatter.png)  
+![scatter](images/scatter.png)  
 The 2D scatter plot shows that most cryptocurrencies are clustered towards the lower left corner, indicating smaller values for both total coin supply and total coins mined. A few outliers may be of interest to investors. 
 
 # Summary
